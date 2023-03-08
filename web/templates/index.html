@@ -1,0 +1,656 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="author" content>
+    <title>Routeam</title>
+
+    <!-- очистка кэша браузера -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', path='/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Slick CSS -->
+    <link href="{{ url_for('static', path='/css/slick.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/slick-theme.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/media.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/typicons.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/pushy.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/magnific-popup.css') }}">
+    <link rel="preload" href="{{ url_for('static', path='/fonts/Montserrat-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body class>
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-left header">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="col">
+                    <div class="header_left">
+                        <a href="/" class="thumbnail logo">
+                            <img src="{{ url_for('static', path='/fonts/logo.svg') }}" alt="Routeam" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="header_right">
+                        <div class="menu-btn close-btn">
+                            <span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="pushy-menu">
+                        <div class="row align-items-center h-100">
+                            <div class="col-12 col-md-6">
+                                <ul>
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#advantages-section">Услуги</a></li>
+                                    <li><a href="#projects-section">Кейсы</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <ul>
+                                    <li>            
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal" style="padding: 0">
+                                            <a href="#">Стать клиентом</a>
+                                        </button>
+                                    </li>
+                                    <li><a href="#workWithUs-section">Работа в Роутим</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-6 my-5 mt-auto">
+                                <a href="tel:+78652498149" class="phone">+7 8652 49 81 49</a>
+                            </div>
+                            <div class="col-12 col-md-6 my-5 mt-auto">
+                                <p class="address">© 2022 Routeam.</p>
+                                <p class="address"> Ставрополь, Доваторцев, 11 а</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <div id="effect-area">
+        <header class="header">
+            <nav class="fixed-top">
+                <div class="container-fluid">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-10 col-xl-6">
+                            <div class="header_left">
+                                <a href="/" class="thumbnail logo">
+                                    <img src="{{ url_for('static', path='/fonts/logo.svg') }}" alt="Routeam" class="img-responsive">
+                                </a>
+                                <a href="tel:+78652498149" class="phone">+7 777 777 77 77</a>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-link btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Стать клиентом
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-2 col-xl-6">
+                            <div class="header_right">
+                                <nav>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#advantages-section">Услуги</a></li>
+                                        <li><a href="#projects-section">Проекты</a></li>
+                                        <li><a href="#workWithUs-section">Работа у нас</a></li>
+                                    </ul>
+                                </nav>
+
+                                <div class="menu-btn">
+                                    <div class="hamburger">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="home">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="jumbotron">
+                        <h1>
+                            Команда программистов <br>для Вашего бизнеса
+                        </h1>
+                        <div class="row col-12 col-md-8">
+                            <p>
+                                Мы любим встряхивать устоявшиеся мыслительные шаблоны и создавать то, что никогда раньше не предпринималось.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="home__btn btn_discuss">Обсудить проект</button>
+        </section>
+    </div>
+
+    <section id="destinations" class="destinations">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="destinations_left">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="destinations_left-number">120+</div>
+                                <div class="destinations_left-text">Успешных проектов</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="destinations_left-number">35</div>
+                                <div class="destinations_left-text">Специалистов</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="destinations_left-number">40 ч</div>
+                                <div class="destinations_left-text">Средний срок подключения на проект</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="destinations_left-number">70 <small>%</small>
+                                </div>
+                                <div class="destinations_left-text">Повторно обратившихся клиентов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="destinations_right">
+                        <div class="destinations_right-title">Наши направления</div>
+                        <div class="destinations_right-description">
+                            <ul>
+                                <li>Промышленныe ERP-системы</li>
+                                <li>Создание веб-сервисов</li>
+                                <li>Разработка кроссплатформенных мобильных приложений</li>
+                                <li>Технологий AR и VR</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row w-100 justify-content-between align-items-center partners">
+                <img src="{{ url_for('static', path='/images/logo-Softline.png') }}" class="partners-icons first-partner-icon icon-softline" alt="softline">
+                <img src="{{ url_for('static', path='/images/logo-Sber.png') }}" class="partners-icons icon-sber" alt="sber">
+                <img src="{{ url_for('static', path='/images/logo-Proapteka.png') }}" class="partners-icons icon-proapteka" alt="proapteka">
+                <img src="{{ url_for('static', path='/images/logo-GLT.png') }}" class="partners-icons icon-glt" alt="glt">
+                <img src="{{ url_for('static', path='/images/logo-Rubrain.png') }}" class="partners-icons last-partner-icon icon-rubrain" alt="rubrain">
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies" class="technologies wow fadeInUp" data-wow-delay="300ms">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="section-title">Технологии</h5>
+
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <div class="tabs-header">
+                            <ul class="nav nav-tabs" data-bs-tabs="tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="true" data-bs-toggle="tab" href="#frontend">Front-end</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#backend">Back-end</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#qa">QA</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#mobile">Mobile</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#design">Design</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tabs-body tab-content">
+                            <div class="tab-pane active" id="frontend">
+                                <div class="items">
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/react-icon.svg') }}" alt="react">
+                                        <p>React</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/vue-icon.svg') }}" alt="vue">
+                                        <p>Vue</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="backend">
+                                <div class="items">
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/php-icon.svg') }}" alt="php">
+                                        <p>PHP</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/laravel-icon.svg') }}" alt="laravel">
+                                        <p>Laravel</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/symfony-icon.svg') }}" alt="symfony">
+                                        <p>Symfony</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/go-icon.svg') }}" alt="go">
+                                        <p>GO</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/c-icon.svg') }}" alt="c#">
+                                        <p>C Sharp</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="qa">
+                                <div class="items">
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/postman-icon.svg') }}" alt="postman">
+                                        <p>Postman</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/meter-icon.svg') }}" alt="meter">
+                                        <p>JMeter</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/charles-icon.svg') }}" alt="charles">
+                                        <p>Charles</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="mobile">
+                                <div class="items">
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/flutter-icon.svg') }}" alt="flutter">
+                                        <p>Flutter</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="design">
+                                <div class="items">
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/figma-icon.svg') }}" alt="figma">
+                                        <p>Figma</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="{{ url_for('static', path='/fonts/photoshop-icon.svg') }}" alt="photoshop">
+                                        <p>Photoshop</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tabs content -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects-section" class="projects">
+        <div class="container-fluid">
+            <div class="row">
+                <h5 class="section-title mb-5">Проекты</h5>
+
+                <div class="boxes">
+                    <a href="#" class="box box2">
+                        <div class="row h-100 justify-content-between">
+                            <div class="col-12">
+                                <div class="box-title">Платформа для <br> проведения видеовстреч
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5 align-self-end ps-0" style="margin-bottom: 30px; margin-top: 20px;">
+                                <div class=" tag">веб-разработка</div>
+                                <div class=" tag">мобильная-разработка</div>
+                            </div>
+                            <div class="col-12 col-md-7 align-self-end">
+                                <div class="box-img">
+                                    <img src="{{ url_for('static', path='/images/project_2.png') }}" alt="project-2">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="box box3">
+                        <div class="row h-100 justify-content-between">
+                            <div class="col-12">
+                                <div class="box-title">
+                                    Гибридная система логистики <br> для транспортной компании
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 align-self-end ps-0" style="margin-bottom: 30px; margin-top: 20px;">
+                                <div class=" tag">веб-разработка</div>
+                                <div class=" tag">мобильная-разработка</div>
+                            </div>
+                            <div class="col-12 col-md-8 align-self-end">
+                                <div class="box-img">
+                                    <img src="{{ url_for('static', path='/images/project_2.png') }}" alt="project-3">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="box box4">
+                        <div class="row h-100 justify-content-between">
+                            <div class="col-12">
+                                <div class="box-title">
+                                    Система создания, ведения, мониторинга
+                                    маркетинговых мероприятий и поощрений
+                                    по результатам выполнения <br> бизнес-плана.
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5 align-self-end ps-0" style="margin-bottom: 30px; margin-top: 20px;">
+                                <div class="tag">веб-разработка</div>
+                            </div>
+                            <div class="col-12 col-md-7 align-self-end">
+                                <div class="box-img">
+                                    <img src="{{ url_for('static', path='/images/project_2.png') }}" alt="project-4">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages-section" class="advantages">
+        <div class="container-fluid">
+            <div class="row">
+                <h5 class="section-title">Преимущества</h5>
+            </div>
+
+            <div id="advantages-carousel">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-7">
+                            <div class="advantages-carousel_left">
+                                <span class="slide-number">01</span>
+                                <h2 class="slide-title">Делаем бизнес <br> эффективнее</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-5">
+                            <div class="advantages-carousel_right">
+                                <p>Решаем любые IT-задачи в корпоративном секторе: создание информационных систем, автоматизация процессов, диверсификация разработки, внедрение подхода «Команда как сервис», экспертиза и консалтинг в IT-сфере.</p>
+
+                                <div class="row">
+                                    <div class="col-12 d-flex mt-5">
+                                        <button class="btn arrow-wrapper arrow-prev-btn">
+                                            <svg viewBox="0 0 38 12">
+                                                <path d="M37.1093 6.53033C37.4022 6.23744 37.4022 5.76256 37.1093 5.46967L32.3363 0.696699C32.0434 0.403806 31.5685 0.403806 31.2756 0.696699C30.9828 0.989593 30.9828 1.46447 31.2756 1.75736L35.5183 6L31.2756 10.2426C30.9828 10.5355 30.9828 11.0104 31.2756 11.3033C31.5685 11.5962 32.0434 11.5962 32.3363 11.3033L37.1093 6.53033ZM0 6.75L36.5789 6.75V5.25L0 5.25L0 6.75Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="btn arrow-wrapper arrow-next-btn">
+                                            <svg viewBox="0 0 38 12">
+                                                <path d="M37.1093 6.53033C37.4022 6.23744 37.4022 5.76256 37.1093 5.46967L32.3363 0.696699C32.0434 0.403806 31.5685 0.403806 31.2756 0.696699C30.9828 0.989593 30.9828 1.46447 31.2756 1.75736L35.5183 6L31.2756 10.2426C30.9828 10.5355 30.9828 11.0104 31.2756 11.3033C31.5685 11.5962 32.0434 11.5962 32.3363 11.3033L37.1093 6.53033ZM0 6.75L36.5789 6.75V5.25L0 5.25L0 6.75Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-7">
+                            <div class="advantages-carousel_left">
+                                <span class="slide-number">02</span>
+                                <h2 class="slide-title">Команда <br> как сервис</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-5">
+                            <div class="advantages-carousel_right">
+                                <p>Оперативно формируем команду высококлассных специалистов с нужными компетенциями: программистов, аналитиков, специалистов по тестированию.
+                                     Наработанные годами методики коммуникаций позволяют воспринимать удаленную команду как часть своего IT-департамента.</p>
+
+                                <div class="row">
+                                    <div class="col-12 d-flex mt-5">
+                                        <button class="btn arrow-wrapper arrow-prev-btn">
+                                            <svg viewBox="0 0 38 12">
+                                                <path d="M37.1093 6.53033C37.4022 6.23744 37.4022 5.76256 37.1093 5.46967L32.3363 0.696699C32.0434 0.403806 31.5685 0.403806 31.2756 0.696699C30.9828 0.989593 30.9828 1.46447 31.2756 1.75736L35.5183 6L31.2756 10.2426C30.9828 10.5355 30.9828 11.0104 31.2756 11.3033C31.5685 11.5962 32.0434 11.5962 32.3363 11.3033L37.1093 6.53033ZM0 6.75L36.5789 6.75V5.25L0 5.25L0 6.75Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="btn arrow-wrapper arrow-next-btn">
+                                            <svg viewBox="0 0 38 12">
+                                                <path d="M37.1093 6.53033C37.4022 6.23744 37.4022 5.76256 37.1093 5.46967L32.3363 0.696699C32.0434 0.403806 31.5685 0.403806 31.2756 0.696699C30.9828 0.989593 30.9828 1.46447 31.2756 1.75736L35.5183 6L31.2756 10.2426C30.9828 10.5355 30.9828 11.0104 31.2756 11.3033C31.5685 11.5962 32.0434 11.5962 32.3363 11.3033L37.1093 6.53033ZM0 6.75L36.5789 6.75V5.25L0 5.25L0 6.75Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-7">
+                            <div class="advantages-carousel_left">
+                                <span class="slide-number">03</span>
+                                <h2 class="slide-title">Искусство разработки ПО</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-5">
+                            <div class="advantages-carousel_right">
+                                <p>Мы разрабатываем программное обеспечение для бизнеса. Решение задач любого масштаба и сложности, передовые методологии разработки, кратчайшие сроки, предсказуемый результат, гибкие модели взаимодействия.
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-12 d-flex mt-5">
+                                        <button class="btn arrow-wrapper arrow-prev-btn">
+                                            <svg viewBox="0 0 38 12">
+                                                <path d="M37.1093 6.53033C37.4022 6.23744 37.4022 5.76256 37.1093 5.46967L32.3363 0.696699C32.0434 0.403806 31.5685 0.403806 31.2756 0.696699C30.9828 0.989593 30.9828 1.46447 31.2756 1.75736L35.5183 6L31.2756 10.2426C30.9828 10.5355 30.9828 11.0104 31.2756 11.3033C31.5685 11.5962 32.0434 11.5962 32.3363 11.3033L37.1093 6.53033ZM0 6.75L36.5789 6.75V5.25L0 5.25L0 6.75Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="btn arrow-wrapper arrow-next-btn">
+                                            <svg viewBox="0 0 38 12">
+                                                <path d="M37.1093 6.53033C37.4022 6.23744 37.4022 5.76256 37.1093 5.46967L32.3363 0.696699C32.0434 0.403806 31.5685 0.403806 31.2756 0.696699C30.9828 0.989593 30.9828 1.46447 31.2756 1.75736L35.5183 6L31.2756 10.2426C30.9828 10.5355 30.9828 11.0104 31.2756 11.3033C31.5685 11.5962 32.0434 11.5962 32.3363 11.3033L37.1093 6.53033ZM0 6.75L36.5789 6.75V5.25L0 5.25L0 6.75Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="row justify-content-md-center">
+                        <div class="col-12 col-sm-7">
+                            <div class="advantages-carousel_left">
+                                <span class="slide-number">04</span>
+                                <h2 class="slide-title">Учитываем интересы не только наших специалистов, <br> но и ваши </h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-5 align-self-center">
+                            <div class="advantages-carousel_right">
+
+                                <div class="row">
+                                    <div class="col-12 d-flex mt-5">
+                                        <button class="btn arrow-wrapper arrow-prev-btn">
+                                            <svg viewBox="0 0 38 12">
+                                                <path d="M37.1093 6.53033C37.4022 6.23744 37.4022 5.76256 37.1093 5.46967L32.3363 0.696699C32.0434 0.403806 31.5685 0.403806 31.2756 0.696699C30.9828 0.989593 30.9828 1.46447 31.2756 1.75736L35.5183 6L31.2756 10.2426C30.9828 10.5355 30.9828 11.0104 31.2756 11.3033C31.5685 11.5962 32.0434 11.5962 32.3363 11.3033L37.1093 6.53033ZM0 6.75L36.5789 6.75V5.25L0 5.25L0 6.75Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="btn arrow-wrapper arrow-next-btn">
+                                            <svg viewBox="0 0 38 12">
+                                                <path d="M37.1093 6.53033C37.4022 6.23744 37.4022 5.76256 37.1093 5.46967L32.3363 0.696699C32.0434 0.403806 31.5685 0.403806 31.2756 0.696699C30.9828 0.989593 30.9828 1.46447 31.2756 1.75736L35.5183 6L31.2756 10.2426C30.9828 10.5355 30.9828 11.0104 31.2756 11.3033C31.5685 11.5962 32.0434 11.5962 32.3363 11.3033L37.1093 6.53033ZM0 6.75L36.5789 6.75V5.25L0 5.25L0 6.75Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workWithUs-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-7 workWithUs-col-left">
+                    <div class="col-12">
+                        <h5 class="section-title workWithUs-title">Работа у нас</h5>
+                    </div>
+                    <div class="col-12 col-md-9 workWithUs-description-container">
+                        <pre class="workWithUs-description">Нам важно, с кем мы работаем, важно, какие у всех нас цели и принципы. Мы верим, что RouTeam — это то место, 
+где можно реализовывать себя в проектах, получать удовольствие от работы, действительно дружить 
+с коллегами и просто делать мир лучше.
+                        </pre>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <ul class="workWithUs-list">
+                        <li class="workWithUs-list-item">QA-инженер</li>
+                        <li class="workWithUs-list-item">Системный аналитик</li>
+                        <li class="workWithUs-list-item">Vue</li>
+                        <li class="workWithUs-list-item">Go</li>
+                        <li class="workWithUs-list-item">DevOps</li>
+                        <li class="workWithUs-list-item">Java</li>
+                        <li class="workWithUs-list-item">Python</li>
+                    </ul>
+                </div>
+            </div>
+    </div></section>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer-top">
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">О компании</a></li>
+                        <li><a href="#advantages-section">Услуги</a></li>
+                        <li><a href="#projects-section">Проекты</a></li>
+                        <li><a href="#workWithUs-section">Работа в Роутим</a></li>
+                        <li><a href="#about">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <div class="social"></div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2022 Routeam. Ставрополь, Доваторцев, 11 а</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="sendEmail-modal modal fade become-customer-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Расскажите о своем проекте</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="modal-form row g-3 needs-validation" novalidate id="form">
+                        <div class="col-12">
+                            <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+                            <div class="invalid-feedback">Заполните поле</div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <input type="text" class="form-control" name="company" placeholder="Компания" required>
+                            <div class="invalid-feedback">Заполните поле</div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <input type="text" class="form-control" name="phone" placeholder="Телефон" required>
+                            <div class="invalid-feedback">Заполните поле</div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <input type="text" class="form-control" name="email" placeholder="E-mail" required>
+                            <div class="invalid-feedback">Заполните поле</div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <textarea class="form-control" placeholder="Опишите свой проект" rows="5" name="description"></textarea>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <button class="btn w-100" type="submit">ОТПРАВИТЬ</button>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="modal-form_info">
+                                <p>*Пожалуйста, заполните все поля.</p>
+                                <p>Нажимая на кнопку, Вы соглашаетесь с политикой конфиденциальности</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', path='/js/jquerry.min.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/bootstrap.scrollspy.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/slick.min.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/pushy.min.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/jquerry.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/three.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/gsap.min.js') }}"></script>
+
+
+
+
+</body></html>
